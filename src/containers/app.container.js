@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import LoadingView from '../view/loading/loading.view';
-import PostListView from '../view/post-list/post-list.view';
+import MainView from '../view/main/main.view';
 import { getJson } from '../actions/actions';
 
 import { Route } from 'react-router-dom'
@@ -35,7 +35,7 @@ class AppContainer extends Component {
     return (
       <div className="AppContainer">
         <Route path="/">
-          {isLoading ? <LoadingView /> : <PostListView posts={visiblePosts} />}
+          {isLoading ? <LoadingView /> : <MainView posts={visiblePosts} />}
         </Route>
       </div>
     );
