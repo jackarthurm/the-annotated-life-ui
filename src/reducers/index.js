@@ -4,10 +4,10 @@ import * as types from '../actions/actionTypes';
 
 
 const initialState = {
+  error: false,
   isLoading: false,
   page: 1,
-  visiblePosts: [],
-  error: false
+  visiblePosts: []
 };
 
 function postsReducer(state = initialState,
@@ -17,26 +17,35 @@ function postsReducer(state = initialState,
 
     case types.RECV_ERROR:
 
-      return Object.assign({}, 
-                           state, 
-                           {isLoading: false,
-                            error: true}
+      return Object.assign(
+        {}, 
+        state, 
+        {
+          error: true,
+          isLoading: false
+        }
       );
 
 		case types.RECV_DATA:
-      console.log('recv_data');
-			return Object.assign({}, 
-                           state, 
-                           {isLoading: false, 
-                            visiblePosts: action.data, 
-                            error: false}
+      // console.log('recv_data');
+			return Object.assign(
+        {}, 
+        state, 
+        {
+          error: false,
+          isLoading: false, 
+          visiblePosts: action.data
+        }
       );
 
 		case types.REQ_DATA:
-			return Object.assign({}, 
-                           state, 
-                           {isLoading: true, 
-                            error: false}
+			return Object.assign(
+        {}, 
+        state, 
+        {
+          error: false,
+          isLoading: true
+        }
       );
 
     default:

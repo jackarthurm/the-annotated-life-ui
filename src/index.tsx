@@ -1,21 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { HashRouter as Router } from 'react-router-dom'
 import {
-  createStore,
-  applyMiddleware
+  applyMiddleware,
+  createStore
 } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-import injectTapEventPlugin from 'react-tap-event-plugin';
-
 import AppContainer from './containers/app.container';
-import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import rootReducer from './reducers';
+import registerServiceWorker from './registerServiceWorker';
 
-import WebFont from 'webfontloader';
+import * as WebFont from 'webfontloader';
+
 
 const TITLE_TEXT = 'TheAnnotatedLife';
 
@@ -34,8 +33,6 @@ WebFont.load({
   }
 });
 
-
-injectTapEventPlugin();
 
 const store = createStore(
   rootReducer,

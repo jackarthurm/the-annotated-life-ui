@@ -1,29 +1,30 @@
 import * as types from './actionTypes';
 import axios from 'axios';
 
+
 function requestData() {
-  console.log('dispatched');
+  // console.log('dispatched');
 	return {type: types.REQ_DATA}
 };
 
 function receiveData(json) {
 	return{
-		type: types.RECV_DATA,
-		data: json.posts
+    data: json.posts,
+		type: types.RECV_DATA
 	}
 };
 
 function receiveError(json) {
 	return {
-		type: types.RECV_ERROR,
-		data: json
+    data: json,
+		type: types.RECV_ERROR
 	}
 };
 
 
 function getJson(url) {
 
-  console.log('called');
+  // console.log('called');
 
   return dispatch => {
 
