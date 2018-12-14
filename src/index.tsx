@@ -4,7 +4,8 @@ import { Provider } from 'react-redux';
 import { HashRouter as Router } from 'react-router-dom'
 import {
   applyMiddleware,
-  createStore
+  createStore,
+  Store
 } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
@@ -34,7 +35,7 @@ WebFont.load({
 });
 
 
-const store = createStore(
+const store: Store = createStore(
   rootReducer,
   applyMiddleware(thunkMiddleware)
 );

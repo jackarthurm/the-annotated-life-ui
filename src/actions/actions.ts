@@ -8,7 +8,7 @@ function requestData() {
 };
 
 function receiveData(json) {
-	return{
+	return {
     data: json.posts,
 		type: types.RECV_DATA
 	}
@@ -30,14 +30,16 @@ function getJson(url) {
 
     dispatch(requestData());
 
-    return axios.get(url, 
-                     {responseType: 'json'})
-                .then(res => {
-                  dispatch(receiveData(res.data));
-                })
-                .catch(res => {
-                  dispatch(receiveError(res.data));
-                });
+    return axios.get(
+      url, 
+      {responseType: 'json'}
+    ).then(res => {
+
+      dispatch(receiveData(res.data));
+    }).catch(res => {
+
+      dispatch(receiveError(res.data));
+    });
   }
 }
 
