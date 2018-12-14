@@ -25,7 +25,7 @@ class AppContainer extends Component {
 
   componentDidMount() {
 
-    this.props.fetchPosts('http://0.0.0.0:8000/posts/');
+    this.props.fetchPosts('http://localhost:8000/posts/');
   }
 
   render() {
