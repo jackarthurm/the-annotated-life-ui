@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "object_id": "16fd2706-8baf-433b-82eb-8c7fada847da",
+      "object_url": "16fd2706-8baf-433b-82eb-8c7fada847da",
+      "title_text": "Post number one",
+      "date_published": "2020-05-07",
+      "date_written": "2020-05-07",
+      "summary_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "footer_text": "I'm a footer",
+      "author_url": "https://author.com",
+      "author_id": "16fd2706-8baf-433b-82eb-8c7fada847da",
+      "tags": ["tag1", "tag2"]
+    },
+    {
+      "object_id": "16fd2706-8baf-433b-82eb-8c7fada847db",
+      "object_url": "16fd2706-8baf-433b-82eb-8c7fada847da",
+      "title_text": "Post number two",
+      "date_published": "2020-05-07",
+      "date_written": "2020-05-07",
+      "summary_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "footer_text": "I'm a footer",
+      "author_url": "https://author.com",
+      "author_id": "16fd2706-8baf-433b-82eb-8c7fada847da",
+      "tags": ["tag1", "tag2"]
+    },
+    {
+      "object_id": "16fd2706-8baf-433b-82eb-8c7fada847dc",
+      "object_url": "16fd2706-8baf-433b-82eb-8c7fada847da",
+      "title_text": "Post number three",
+      "date_published": "2020-05-07",
+      "date_written": "2020-05-07",
+      "summary_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "footer_text": "I'm a footer",
+      "author_url": "https://author.com",
+      "author_id": "16fd2706-8baf-433b-82eb-8c7fada847da",
+      "tags": ["tag1", "tag2"]
+    },
+    {
+      "object_id": "16fd2706-8baf-433b-82eb-8c7fada847dd",
+      "object_url": "16fd2706-8baf-433b-82eb-8c7fada847da",
+      "title_text": "Post number four",
+      "date_published": "2019-05-07",
+      "date_written": "2019-05-07",
+      "summary_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "footer_text": "I'm a footer",
+      "author_url": "https://author.com",
+      "author_id": "16fd2706-8baf-433b-82eb-8c7fada847da",
+      "tags": ["tag1", "tag2"]
+    }
+  ]
+}

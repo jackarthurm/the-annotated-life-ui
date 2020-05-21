@@ -1,51 +1,35 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { HashRouter as Router } from 'react-router-dom'
-import {
-  applyMiddleware,
-  createStore,
-  Store
-} from 'redux';
-import thunkMiddleware from 'redux-thunk';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import AppContainer from './containers/app.container';
 import './index.css';
-import rootReducer from './reducers';
-import registerServiceWorker from './registerServiceWorker';
+import * as serviceWorker from './serviceWorker';
 
 import * as WebFont from 'webfontloader';
-
+import { App } from './app';
 
 const TITLE_TEXT = 'TheAnnotatedLife';
-
 
 WebFont.load({
   google: {
     families: ['Cinzel Decorative:400:latin'],
-    text: TITLE_TEXT
-  }
+    text: TITLE_TEXT,
+  },
 });
 
 WebFont.load({
   google: {
-    families: ['Alegreya:400:latin', 
-               'Alegreya SC:400:latin']
-  }
+    families: ['Alegreya:400:latin', 'Alegreya SC:400:latin'],
+  },
 });
 
-
-const store: Store = createStore(
-  rootReducer,
-  applyMiddleware(thunkMiddleware)
-);
-
 ReactDOM.render(
-  <Provider store={store}>
-		<Router>
-      <AppContainer />
-		</Router>
-	</Provider>, 
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );
-registerServiceWorker();
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
